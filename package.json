@@ -1,0 +1,25 @@
+{
+  "name": "Sohpify",
+  "version": "1.0.0",
+  "description": "W2P Integration Testing React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VivaMango/Sohpify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VivaMango/Sohpify/issues"
+  },
+  "homepage": "https://github.com/VivaMango/Sohpify#readme",
+  "dependencies": {
+    "next": "^9.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
