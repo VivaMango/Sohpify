@@ -697,6 +697,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shopify_polaris_styles_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_shopify_polaris_styles_css__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! js-cookie */ "js-cookie");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_8__);
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -705,6 +709,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
+const client = new apollo_boost__WEBPACK_IMPORTED_MODULE_7___default.a({
+  fetchOptions: {
+    credentials: 'include'
+  }
+});
 
 class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
   render() {
@@ -721,7 +732,9 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       charSet: "utf-8"
     })), __jsx(_shopify_app_bridge_react__WEBPACK_IMPORTED_MODULE_4__["Provider"], {
       config: config
-    }, __jsx(_shopify_polaris__WEBPACK_IMPORTED_MODULE_3__["AppProvider"], null, __jsx(Component, pageProps))));
+    }, __jsx(_shopify_polaris__WEBPACK_IMPORTED_MODULE_3__["AppProvider"], null, __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_8__["ApolloProvider"], {
+      client: client
+    }, __jsx(Component, pageProps)))));
   }
 
 }
@@ -761,6 +774,17 @@ module.exports = require("@shopify/app-bridge-react");
 /***/ (function(module, exports) {
 
 module.exports = require("@shopify/polaris");
+
+/***/ }),
+
+/***/ "apollo-boost":
+/*!*******************************!*\
+  !*** external "apollo-boost" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("apollo-boost");
 
 /***/ }),
 
@@ -882,6 +906,17 @@ module.exports = require("prop-types");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-apollo":
+/*!*******************************!*\
+  !*** external "react-apollo" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-apollo");
 
 /***/ })
 
